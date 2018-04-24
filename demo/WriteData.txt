@@ -1,0 +1,28 @@
+// NUMERIC
+document.querySelector("*[name='C12']").value = 15; // INPUT TEXT or INPUT NUMBER or HIDDEN or SELECT
+
+// OUVERTE
+document.querySelector("*[name='S12']").value = "TOTO"; // INPUT OR TEXTAREA OR SELECT OR HIDDEN
+
+// DATE
+document.querySelector("*[name='D12']").value = "12/01/2013"; // INPUT TEXT or INPUT DATE or SELECT or HIDDEN
+
+// TIME
+document.querySelector("*[name='T12']").value = "13:50:00"; // INPUT TEXT or INPUT TIME or SELECT or HIDDEN
+
+// DATE & TIME
+document.querySelector("*[name='D12']").value = "12/01/2013"; // INPUT TEXT or INPUT DATE or SELECT or HIDDEN
+document.querySelector("*[name='T12']").value = "13:50:00"; // INPUT TEXT or INPUT TIME or SELECT or HIDDEN
+
+// SINGLE
+document.querySelector("input[type='radio'][name='U12'][value='15']").checked = true; // RADIO
+document.querySelector("select[name='U12'], input[type='hidden'][name='U12']").value = 15; // HIDDEN or SELECT
+
+// MULTIPLE
+document.querySelector("input[type='checkbox'][name='M12 15']").checked = true; // CHECKBOX
+document.querySelector("input[type='checkbox'][name='M12 16']").checked = true; // CHECKBOX
+document.querySelector("input[type='hidden'][name='L12']").value = '15,16'; // HIDDEN LIST
+document.querySelector("select[name='L12'][multiple='multiple'] option[value='15']").selected = true; // SELECT LIST
+document.querySelector("select[name='L12'][multiple='multiple'] option[value='16']").selected = true; // SELECT LIST
+document.querySelector("input[type='text'][name='R12 15'], input[type='number'][name='R12 15']").value = '1'; // INPUT TEXT OR NUMBER RANKED
+document.querySelector("input[type='text'][name='R12 16'], input[type='number'][name='R12 16']").value = '2'; // INPUT TEXT OR NUMBER RANKED

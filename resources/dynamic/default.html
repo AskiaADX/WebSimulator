@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Askia web simulator</title>
+        <meta charset="utf-8" content="text/html" http-equiv="Content-Type">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Askia - software for surveys">
+        <meta name="theme-color" content="#DF4335">
+        <!--- ASKIA HEAD HERE -->
+        <askia-head />
+    </head>
+    <body>
+        <div class="main">
+            <!--- ASKIA FORM BEGINS HERE -->
+            <askia-form>
+                <div class="askiaquestions">
+                    {% If CurrentQuestions.Errors.Count Then %}
+                    <div class="askia-errors-summary">
+                        <ul>
+                            {% Dim errorIndex = 1
+							For errorIndex = 1 To CurrentQuestions.Errors.Count %}
+                            <li>{%= CurrentQuestions.Errors[errorIndex].Message %}</li>
+                            {% Next %}
+                        </ul>
+                    </div>
+                    {% End If %}
+                    <!--- ASKIA QUESTIONS HERE -->
+                    <askia-questions />
+                    <div class="navigation">
+                        <input type="submit" name="Next" class="btn primary keyframe" value="Next" />
+                    </div>
+                </div>
+            </askia-form>
+            <!--- ASKIA FORM ENDS HERE -->
+        </div>
+        <!--- ASKIA FOOT HERE -->
+        <askia-foot />
+    </body>
+</html>

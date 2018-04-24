@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<page  xmlns="http://www.askia.com/2.1.0/ADPSchema"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://www.askia.com/2.1.0/ADPSchema https://raw.githubusercontent.com/AskiaADX/ADXSchema/2.1.0/ADPSchema.xsd"
+          version="2.1.0"
+          askiaCompat="5.4.2">
+  <info>
+    <name>WebSimulator</name>
+    <guid>6759078f-2ca0-4978-b91a-db0dfb3f9e6f</guid>
+    <version>1.0.0</version>
+    <date>2018-04-20</date>
+    <description><![CDATA[adp Web Simulator]]></description>
+    <company>askia</company>
+    <author><![CDATA[Jerome Duparc <jeromed@askia.com>]]></author>
+    <site>https://www.askia.com/</site>
+    <helpURL></helpURL>
+  </info>
+  <outputs defaultOutput="default">
+    <output id="default" masterPage="default.html">
+      <description><![CDATA[Default output]]></description>
+      <content fileName="html5-ie.js" type="javascript" mode="static" position="head" />
+      <content fileName="WebSimulator.js" type="javascript" mode="static" position="foot" />
+      <content fileName="Initializer.js" type="javascript" mode="dynamic" position="foot" />
+    </output>
+  </outputs>
+  <properties>
+    <category id="general" name="General">
+      <property xsi:type="standardProperty" id="websimulator" name="Activate web simulator" type="string" mode="dynamic" require="true" visible="true">
+        <description><![CDATA[Activate web simulator]]></description>
+        <value><![CDATA[no]]></value>
+        <options>
+          <option value="yes" text="Yes" />
+          <option value="no" text="No" />
+        </options>
+      </property>
+    </category>
+  </properties>
+</page>
