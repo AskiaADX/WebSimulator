@@ -94,11 +94,6 @@
      */
     function setToMultipleQuestion (jsonObj) {
         
-        // INPUT TEXT or INPUT NUMBER or HIDDEN or SELECT
-        if (document.querySelector("*[name='C" + jsonObj.inputcode + "']")) {
-        	document.querySelector("*[name='C" + jsonObj.inputcode + "']").value = parseFloat(jsonObj.values);   
-        }
-        
         // HIDDEN LIST
         if (document.querySelector("input[type='hidden'][name='L" + jsonObj.inputcode + "']")) {
         	document.querySelector("input[type='hidden'][name='L" + jsonObj.inputcode + "']").value = jsonObj.values;
